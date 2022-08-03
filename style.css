@@ -1,0 +1,85 @@
+/* 
+Author Name	: Bholu Singh
+Website		: Free Projects1 
+File Name 	: style.css
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: #333;
+}
+.container .loader{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+.container .loader.loader1{
+    border-top: 2px solid rgb(27, 255, 65);
+    border-left: 2px solid rgb(27, 255, 65);
+    animation: animate1 2.5s linear infinite;
+}
+
+.container .loader.loader2{
+    width: 80px;
+    height: 80px;
+    border-top: 2px solid #0ff;
+    border-left: 2px solid #0ff;
+    animation: animate2 2.5s linear infinite;
+}
+.container .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.container .loader.loader1 .circle{
+    top: 6%;
+    left: 78%;
+    background: rgb(27, 255, 65);
+    box-shadow: 0 0 20px rgb(27, 255, 65),
+                0 0 40px rgb(27, 255, 65), 
+                0 0 60px rgb(27, 255, 65),
+                0 0 80px rgb(27, 255, 65),
+                0 0 100px rgb(27, 255, 65);                
+}
+.container .loader.loader2 .circle{
+    top: 78%;
+    left: 6%;
+    background: #0ff;
+    box-shadow: 0 0 20px #0ff,
+                0 0 40px #0ff, 
+                0 0 60px #0ff, 
+                0 0 80px #0ff, 
+                0 0 100px #0ff;
+}
+@keyframes animate1{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
